@@ -13,6 +13,7 @@
         android:layout_marginTop="32dp"
         android:text="Caculo Informacion Notas"
         android:textAllCaps="true"
+        android:textColor="#03A9F4"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Estudiante:"
+        android:textColor="#03A9F4"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -64,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="Promedio:"
+        android:textColor="#03A9F4"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -73,19 +76,35 @@
         android:id="@+id/TextLabelNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
+        android:textColor="#AF2020"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textPromedio"
+        android:id="@+id/TextPromedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="TextView"
+        android:textColor="#AF2020"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/TextInfo"
+        android:layout_width="374dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="84dp"
+        android:text="TextView"
+        android:textColor="#AF2020"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/TextPromedio" />
 </androidx.constraintlayout.widget.ConstraintLayout>

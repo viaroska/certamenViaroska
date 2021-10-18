@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.textservice.TextInfo;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,21 +16,26 @@ public class MainActivity2 extends AppCompatActivity {
     private Button BotonVolver;
     private String stNombre;
     private TextView TextLabelNombre;
+    private String stCarrera;
+    private TextView TextInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         TextLabelNombre=(TextView) findViewById(R.id.TextLabelNombre);
+        TextInfo=(TextView) findViewById(R.id.TextInfo);
         Context context=getApplicationContext();
 
         Bundle intentV=this.getIntent().getExtras();
         if (intentV!=null){
+            stCarrera=intentV.getString("carrera");
             stNombre=intentV.getString("nombre");
-            Toast.makeText(context,"Su Nombre es: "+stNombre,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ",Toast.LENGTH_SHORT).show();
         }
 
         TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
+        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ");
 
         BotonVolver = (Button) findViewById(R.id.buttonVolver);
         Intent intentVol=new Intent(this,MainActivity.class);
